@@ -49,7 +49,7 @@ public class BaseTest {
 
     @BeforeClass
     public static void beforeClass() throws Exception {
-        File file = new File("C:/Users/amm15752/.groovy/grapes/ai/amanas17/resources/md-p1.dat");
+        File file = new File("resources/md-p1.csv");
         CSVLoader loader = new CSVLoader();
 //        loader.setOptions(new String[] { "-N", "1-4,6" });
         loader.setFile(file);
