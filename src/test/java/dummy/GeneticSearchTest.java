@@ -13,15 +13,15 @@ public class GeneticSearchTest extends BaseTest {
     public void GeneticSearchWithStartSet() throws Exception {
         GeneticSearch gs = new GeneticSearch();
         gs.setStartSet("1,4");
-        selectAttributes(gs);
+        selectAttributes(gs, null);
     }
 
     /**
-     * Fatal - no entiendo por qué
+     * Fatal - no entiendo por quï¿½
      */
     @Test
     public void GeneticSearchDefault() throws Exception {
         GeneticSearch gs = new GeneticSearch();
-        selectAttributes(gs);
+        selectAttributes(gs, null);
     }
 }

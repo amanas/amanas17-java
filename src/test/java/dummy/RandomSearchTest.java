@@ -14,7 +14,7 @@ public class RandomSearchTest extends BaseTest {
     public void LinearForwardSelectionWithStartSet() throws Exception {
         LinearForwardSelection lfs = new LinearForwardSelection();
         lfs.setOptions(new String[] { "-P", "1,4" });
-        selectAttributes(lfs);
+        selectAttributes(lfs, null);
     }
 
     /**
@@ -24,6 +24,6 @@ public class RandomSearchTest extends BaseTest {
     public void LinearForwardSelectionDefault() throws Exception {
         RandomSearch rs = new RandomSearch();
         rs.setSearchPercent(100);
-        selectAttributes(rs);
+        selectAttributes(rs, null);
     }
 }

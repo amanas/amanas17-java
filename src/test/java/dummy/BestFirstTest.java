@@ -2,40 +2,40 @@ package dummy;
 
 import org.junit.Test;
 
-import weka.attributeSelection.BestFirst;
+
 
 public class BestFirstTest extends BaseTest {
 
     /**
-     * A diferencia de forward, aquí no incluye atributos irrelevantes para la predicción
+     * A diferencia de forward, aquï¿½ no incluye atributos irrelevantes para la predicciï¿½n
      */
     @Test
     public void BestFirstWithStartSetOverloadedBackward() throws Exception {
         BestFirst bf = new BestFirst();
         bf.setDirection(BACKWARD);
         bf.setStartSet("1,4");
-        selectAttributes(bf);
+        selectAttributes(bf, null);
     }
 
     /**
-     * No realiza un filtrado óptimo porque el atributo 3, que incluye en el resultado es redundante
+     * No realiza un filtrado ï¿½ptimo porque el atributo 3, que incluye en el resultado es redundante
      */
     @Test
     public void BestFirstWithStartSetOverloaded() throws Exception {
         BestFirst bf = new BestFirst();
         bf.setStartSet("1,2,4");
-        selectAttributes(bf);
+        selectAttributes(bf, null);
     }
 
     /**
-     * Nótese que B no contine toda la información para la predicción, por lo que se incluye C en el
+     * Nï¿½tese que B no contine toda la informaciï¿½n para la predicciï¿½n, por lo que se incluye C en el
      * resultado
      */
     @Test
     public void BestFirstWithStartSet() throws Exception {
         BestFirst bf = new BestFirst();
         bf.setStartSet("1,3");
-        selectAttributes(bf);
+        selectAttributes(bf, null);
     }
 
     /**
@@ -45,15 +45,17 @@ public class BestFirstTest extends BaseTest {
     public void filtradoBestFirstBackward() throws Exception {
         BestFirst bf = new BestFirst();
         bf.setDirection(BACKWARD);
-        selectAttributes(bf);
+        selectAttributes(bf, null);
     }
 
     /**
-     * BestFirst por defecto. Lo hace forward partiendo de un conjunto vacío de atributos
+     * BestFirst por defecto. Lo hace forward partiendo de un conjunto vacï¿½o de atributos
      */
     @Test
     public void BestFirstPorDefecto() throws Exception {
         BestFirst bf = new BestFirst();
-        selectAttributes(bf);
+//        bf.setDirection(BIDIRECTIONAL);
+        bf.setSearchTermination(50);;
+        selectAttributes(bf, null);
     }
 }

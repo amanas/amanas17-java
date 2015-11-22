@@ -13,7 +13,7 @@ public class LinearForwardSelectionTest extends BaseTest {
     public void LinearForwardSelectionWithStartSet() throws Exception {
         LinearForwardSelection lfs = new LinearForwardSelection();
         lfs.setOptions(new String[] { "-P", "1,4" });
-        selectAttributes(lfs);
+        selectAttributes(lfs, null);
     }
 
     /**
@@ -22,6 +22,6 @@ public class LinearForwardSelectionTest extends BaseTest {
     @Test
     public void LinearForwardSelectionDefault() throws Exception {
         LinearForwardSelection lfs = new LinearForwardSelection();
-        selectAttributes(lfs);
+        selectAttributes(lfs, null);
     }
 }
