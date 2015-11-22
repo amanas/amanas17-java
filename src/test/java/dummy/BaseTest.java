@@ -49,7 +49,7 @@ public class BaseTest {
 
     @BeforeClass
     public static void beforeClass() throws Exception {
-        File file = new File("resources/md-p1.csv");
+        File file = new File("md/p2_1.csv");
         CSVLoader loader = new CSVLoader();
 //        loader.setOptions(new String[] { "-N", "1-4,6" });
         loader.setFile(file);
