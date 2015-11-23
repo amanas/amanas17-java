@@ -20,7 +20,7 @@
  *
  */
 
-package dummy;
+package amanas17.java.md.p2_1;
 
 import weka.attributeSelection.ASEvaluation;
 import weka.attributeSelection.ASSearch;

@@ -1,4 +1,4 @@
-package dummy;
+package amanas17.java.md.p2_1;
 
 import org.junit.Test;
 
