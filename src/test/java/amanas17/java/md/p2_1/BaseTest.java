@@ -56,7 +56,7 @@ public class BaseTest {
 		// loader.setOptions(new String[] { "-N", "1-4,6" });
 		loader.setFile(file);
 		data = loader.getDataSet();
-		data.deleteAttributeAt(3);
+//		data.deleteAttributeAt(3);
 		data.setClassIndex(data.numAttributes() - 1);
 		log(data);
 	}
