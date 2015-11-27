@@ -757,7 +757,6 @@ public class BestFirst extends ASSearch implements OptionHandler, StartSetHandle
 		lookup.put(hashC, new Double(best_merit));
 
 		while (stale < m_maxStale) {
-			System.out.println(temp_group);
 			added = false;
 
 			if (m_searchDirection == SELECTION_BIDIRECTIONAL) {
@@ -790,7 +789,6 @@ public class BestFirst extends ASSearch implements OptionHandler, StartSetHandle
 			}
 
 			do {
-				System.out.println(temp_group);
 				for (i = 0; i < m_numAttribs; i++) {
 					
 					if (sd == SELECTION_FORWARD) {
@@ -818,6 +816,8 @@ public class BestFirst extends ASSearch implements OptionHandler, StartSetHandle
 
 						if (lookup.containsKey(hashC) == false) {
 							merit = ASEvaluator.evaluateSubset(temp_group);
+		                    System.out.println(temp_group + " - " + merit);
+
 							m_totalEvals++;
 
 							// insert this one in the hashtable
@@ -872,7 +872,6 @@ public class BestFirst extends ASSearch implements OptionHandler, StartSetHandle
 							temp_group.set(i);
 							size++;
 						}
-						System.out.println(temp_group);
 					}
 				}
 

@@ -1,8 +1,8 @@
 package amanas17.java.md.p2_1;
 
+import java.util.BitSet;
+
 import org.junit.Test;
-
-
 
 public class BestFirstTest extends BaseTest {
 
@@ -18,7 +18,8 @@ public class BestFirstTest extends BaseTest {
     }
 
     /**
-     * No realiza un filtrado �ptimo porque el atributo 3, que incluye en el resultado es redundante
+     * No realiza un filtrado �ptimo porque el atributo 3, que incluye en el resultado es
+     * redundante
      */
     @Test
     public void BestFirstWithStartSetOverloaded() throws Exception {
@@ -28,8 +29,8 @@ public class BestFirstTest extends BaseTest {
     }
 
     /**
-     * N�tese que B no contine toda la informaci�n para la predicci�n, por lo que se incluye C en el
-     * resultado
+     * N�tese que B no contine toda la informaci�n para la predicci�n, por lo que se incluye C
+     * en el resultado
      */
     @Test
     public void BestFirstWithStartSet() throws Exception {
@@ -54,8 +55,7 @@ public class BestFirstTest extends BaseTest {
     @Test
     public void BestFirstPorDefecto() throws Exception {
         BestFirst bf = new BestFirst();
-//        bf.setDirection(BIDIRECTIONAL);
-        bf.setSearchTermination(50);;
-        selectAttributes(bf, null);
+        bf.setSearchTermination(50);
+        selectAttributes(bf, new CfsSubsetEval());
     }
 }
